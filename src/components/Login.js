@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 function Login({ setIsLoggedIn }) {
+  //useHistory to store login information and remember the user in future logins
   const history = useHistory();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
 
+  //update storage params
   function handleChange(e) {
     setFormData({
       ...formData,
